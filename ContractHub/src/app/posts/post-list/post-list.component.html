@@ -1,0 +1,17 @@
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header id="cardHeader">
+      {{ post.title }}
+    </mat-expansion-panel-header>
+    <mat-card class="cardDisplay">Contract Value: &euro;{{ post.salary }}</mat-card>
+    <mat-card class="cardDisplay">Location: {{ post.location }}</mat-card>
+    <mat-card class="cardDisplay">Client: {{ post.client }}</mat-card>
+    <mat-card class="cardDisplay">Duration: {{ post.duration }}</mat-card>
+    <mat-card class="cardDisplay">Description: {{ post.desc }}</mat-card>
+    <mat-action-row>
+      <a mat-button color="primary" mat-button [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active" >EDIT</a>
+      <button color="warn" mat-button (click)="onDelete(post.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<mat-card class="mat-body-1" *ngIf="posts.length <=0">No posts currently available...</mat-card>

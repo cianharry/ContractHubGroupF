@@ -1,0 +1,18 @@
+main {
+  width: 35%;
+  opacity: 0.95;
+}
+
+#all{
+  background:url('../assets/images/back1.jpg') repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#outer {
+  width: 90%;
+  margin: 0 auto;
+}
