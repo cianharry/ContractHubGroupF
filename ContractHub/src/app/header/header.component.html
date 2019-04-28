@@ -2,17 +2,20 @@
   <span><a routerLink="/"><i class="fas fa-bolt mr-3"></i>  ContractHub</a></span>
   <span class='navSpace'></span>
   <ul>
-    <li>
+    <li *ngIf="userIsAuthenticated">
       <a mat-button routerLink="/create">Create Contract</a>
     </li>
-    <li>
+    <li *ngIf="userIsAuthenticated">
       <a mat-button routerLink="/contracts">Contracts</a>
     </li>
-    <li>
+    <li *ngIf="!userIsAuthenticated">
       <a mat-button routerLink="/login">Login</a>
     </li>
-    <li>
+    <li *ngIf="!userIsAuthenticated">
       <a mat-button routerLink="/register">Register</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button>Logout</button>
     </li>
   </ul>
 </mat-toolbar>

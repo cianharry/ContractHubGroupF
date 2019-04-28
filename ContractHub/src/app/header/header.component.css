@@ -20,3 +20,8 @@ ul li a:hover {
 .navSpace {
   flex: 1 1 auto;
 }
+
+button:hover {
+  background-color: white;
+  color: darkorchid;
+}
